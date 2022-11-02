@@ -16,6 +16,7 @@
         android:layout_marginEnd="16dp"
         android:text="Mode 2"
         android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +29,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:backgroundTint="#000000"
         android:text="Conver to Mode 1"
+        android:textColor="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,6 +42,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:gravity="right|center_vertical"
+        android:textColor="#505050"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +58,7 @@
         android:layout_marginEnd="16dp"
         android:gravity="right|center_vertical"
         android:text="0"
+        android:textColor="#505050"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +72,7 @@
         android:layout_height="3dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:background="#3F51B5"
+        android:background="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,15 +85,19 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
+        android:backgroundTint="#00000000"
+        android:onClick="SinButtonClick"
         android:tag="sin"
         android:text="sin"
+        android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toStartOf="@+id/CosButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/CosButton"
@@ -97,15 +106,19 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
+        android:backgroundTint="#00000000"
+        android:onClick="CosButtonClick"
         android:tag="cos"
         android:text="cos"
+        android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/LogButton"
         app:layout_constraintEnd_toStartOf="@+id/TanButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/SinButton"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/TanButton"
@@ -114,15 +127,19 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
+        android:backgroundTint="#00000000"
+        android:onClick="TanButtonClick"
         android:tag="tan"
         android:text="tan"
+        android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/FactorialButton"
         app:layout_constraintEnd_toStartOf="@+id/SCDeleteButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/CosButton"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCDeleteButton"
@@ -131,14 +148,18 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#00000000"
+        android:onClick="BackSpaceButtonClick"
         android:text="Del"
+        android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/SCCLearButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/TanButton"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/button7"
@@ -146,13 +167,19 @@
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="4dp"
-        android:textSize="16sp"
+        android:backgroundTint="#00000000"
+        android:onClick="OperatorClick"
+        android:text="%"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/SCNum1Button"
         app:layout_constraintEnd_toStartOf="@+id/LogButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SinButton" />
+        app:layout_constraintTop_toBottomOf="@+id/SinButton"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/LogButton"
@@ -160,14 +187,18 @@
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
+        android:backgroundTint="#00000000"
+        android:onClick="LogButtonClick"
         android:text="Log"
+        android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/SCNum2Button"
         app:layout_constraintEnd_toStartOf="@+id/FactorialButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/CosButton" />
+        app:layout_constraintTop_toBottomOf="@+id/CosButton"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCCLearButton"
@@ -175,14 +206,18 @@
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#00000000"
+        android:onClick="ClearButtonClick"
         android:text="Clear"
+        android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/SCMultipleButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/FactorialButton"
-        app:layout_constraintTop_toBottomOf="@+id/SCDeleteButton" />
+        app:layout_constraintTop_toBottomOf="@+id/SCDeleteButton"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/FactorialButton"
@@ -190,14 +225,18 @@
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
+        android:backgroundTint="#00000000"
+        android:onClick="FactorialButtonClick"
         android:text="n!"
+        android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/SCNum3Button"
         app:layout_constraintEnd_toStartOf="@+id/SCCLearButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/LogButton"
-        app:layout_constraintTop_toBottomOf="@+id/TanButton" />
+        app:layout_constraintTop_toBottomOf="@+id/TanButton"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCNum1Button"
@@ -205,16 +244,19 @@
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="4dp"
-        android:backgroundTint="#6731C8"
+        android:backgroundTint="#00000000"
+        android:onClick="NumButtonClick"
         android:tag="1"
         android:text="1"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/SCNum4Button"
         app:layout_constraintEnd_toStartOf="@+id/SCNum2Button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toBottomOf="@+id/button7"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCNum3Button"
@@ -222,16 +264,19 @@
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
-        android:backgroundTint="#6731C8"
+        android:backgroundTint="#00000000"
+        android:onClick="NumButtonClick"
         android:tag="3"
         android:text="3"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/SCNum6Button"
         app:layout_constraintEnd_toStartOf="@+id/SCMultipleButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/SCNum2Button"
-        app:layout_constraintTop_toBottomOf="@+id/FactorialButton" />
+        app:layout_constraintTop_toBottomOf="@+id/FactorialButton"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCMultipleButton"
@@ -239,15 +284,19 @@
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#00000000"
+        android:onClick="OperatorClick"
         android:tag="×"
         android:text="×"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/SCMinusButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/SCNum3Button"
-        app:layout_constraintTop_toBottomOf="@+id/SCCLearButton" />
+        app:layout_constraintTop_toBottomOf="@+id/SCCLearButton"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCNum2Button"
@@ -255,32 +304,19 @@
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
-        android:backgroundTint="#6731C8"
+        android:backgroundTint="#00000000"
+        android:onClick="NumButtonClick"
         android:tag="2"
         android:text="2"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/SCNum5Button"
         app:layout_constraintEnd_toStartOf="@+id/SCNum3Button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/SCNum1Button"
-        app:layout_constraintTop_toBottomOf="@+id/LogButton" />
-
-    <Button
-        android:id="@+id/SCConvertSignButton"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="8dp"
-        android:text="+/-"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/SCNum0Button"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SCNum7Button" />
+        app:layout_constraintTop_toBottomOf="@+id/LogButton"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCNum6Button"
@@ -288,16 +324,19 @@
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
-        android:backgroundTint="#6731C8"
+        android:backgroundTint="#00000000"
+        android:onClick="NumButtonClick"
         android:tag="6"
         android:text="6"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/SCNum9Button"
         app:layout_constraintEnd_toStartOf="@+id/SCMinusButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/SCNum5Button"
-        app:layout_constraintTop_toBottomOf="@+id/SCNum3Button" />
+        app:layout_constraintTop_toBottomOf="@+id/SCNum3Button"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCNum5Button"
@@ -305,16 +344,19 @@
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
-        android:backgroundTint="#6731C8"
+        android:backgroundTint="#00000000"
+        android:onClick="NumButtonClick"
         android:tag="5"
         android:text="5"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/SCNum8Button"
         app:layout_constraintEnd_toStartOf="@+id/SCNum6Button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/SCNum4Button"
-        app:layout_constraintTop_toBottomOf="@+id/SCNum2Button" />
+        app:layout_constraintTop_toBottomOf="@+id/SCNum2Button"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCPlusButton"
@@ -322,15 +364,19 @@
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#00000000"
+        android:onClick="OperatorClick"
         android:tag="＋"
         android:text="＋"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/SCEqualButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/SCNum9Button"
-        app:layout_constraintTop_toBottomOf="@+id/SCMinusButton" />
+        app:layout_constraintTop_toBottomOf="@+id/SCMinusButton"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCNum9Button"
@@ -338,16 +384,18 @@
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
-        android:backgroundTint="#6731C8"
+        android:backgroundTint="#00000000"
         android:tag="9"
         android:text="9"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/SCDecimalsButton"
         app:layout_constraintEnd_toStartOf="@+id/SCPlusButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/SCNum8Button"
-        app:layout_constraintTop_toBottomOf="@+id/SCNum6Button" />
+        app:layout_constraintTop_toBottomOf="@+id/SCNum6Button"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCNum7Button"
@@ -355,34 +403,38 @@
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="4dp"
-        android:backgroundTint="#6731C8"
+        android:backgroundTint="#00000000"
         android:tag="7"
         android:text="7"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/SCConvertSignButton"
+        app:layout_constraintBottom_toTopOf="@+id/SCNum0Button"
         app:layout_constraintEnd_toStartOf="@+id/SCNum8Button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SCNum4Button" />
+        app:layout_constraintTop_toBottomOf="@+id/SCNum4Button"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCNum0Button"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
+        android:layout_width="185dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="8dp"
-        android:backgroundTint="#6731C8"
+        android:backgroundTint="#00000000"
         android:tag="0"
         android:text="0"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/SCDecimalsButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/SCConvertSignButton"
-        app:layout_constraintTop_toBottomOf="@+id/SCNum8Button" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SCNum8Button"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCMinusButton"
@@ -390,15 +442,19 @@
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#00000000"
+        android:onClick="OperatorClick"
         android:tag="－"
         android:text="－"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/SCPlusButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/SCNum6Button"
-        app:layout_constraintTop_toBottomOf="@+id/SCMultipleButton" />
+        app:layout_constraintTop_toBottomOf="@+id/SCMultipleButton"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCNum8Button"
@@ -406,16 +462,18 @@
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
-        android:backgroundTint="#6731C8"
+        android:backgroundTint="#00000000"
         android:tag="8"
         android:text="8"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/SCNum0Button"
         app:layout_constraintEnd_toStartOf="@+id/SCNum9Button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/SCNum7Button"
-        app:layout_constraintTop_toBottomOf="@+id/SCNum5Button" />
+        app:layout_constraintTop_toBottomOf="@+id/SCNum5Button"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCDecimalsButton"
@@ -424,15 +482,18 @@
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="8dp"
+        android:backgroundTint="#00000000"
         android:tag="."
         android:text="."
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/SCEqualButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/SCNum0Button"
-        app:layout_constraintTop_toBottomOf="@+id/SCNum9Button" />
+        app:layout_constraintTop_toBottomOf="@+id/SCNum9Button"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCNum4Button"
@@ -440,16 +501,19 @@
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="4dp"
-        android:backgroundTint="#6731C8"
+        android:backgroundTint="#00000000"
+        android:onClick="NumButtonClick"
         android:tag="4"
         android:text="4"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/SCNum7Button"
         app:layout_constraintEnd_toStartOf="@+id/SCNum5Button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SCNum1Button" />
+        app:layout_constraintTop_toBottomOf="@+id/SCNum1Button"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/SCEqualButton"
@@ -458,14 +522,18 @@
         android:layout_marginStart="4dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
+        android:backgroundTint="#00000000"
+        android:onClick="EqualButtonClick"
         android:tag="="
         android:text="="
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/SCDecimalsButton"
-        app:layout_constraintTop_toBottomOf="@+id/SCPlusButton" />
+        app:layout_constraintTop_toBottomOf="@+id/SCPlusButton"
+        app:strokeWidth="3dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
