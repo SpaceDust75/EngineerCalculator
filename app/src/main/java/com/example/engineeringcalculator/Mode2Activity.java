@@ -65,8 +65,12 @@ public class Mode2Activity extends AppCompatActivity {
     public void TanButtonClick(View view){
 
     }
-    public void LogButtonClick(View view){
-
+    public void LogButtonClick(View view){      // 자연로그 값 출력(상용로그 x, 상용로그 출력하고 싶다면 자연로그 * 0.434294482)
+        InputNumber = Double.parseDouble(activityMainBinding.ResultTextView.getText().toString());
+        ResultNumber = 0;
+        activityMainBinding.MathExpressionTextView.setText("Log" + InputNumber);
+        ResultNumber = Math.log(InputNumber);
+        activityMainBinding.ResultTextView.setText(String.valueOf(ResultNumber));
     }
     public void FactorialButtonClick(View view){
 
@@ -166,6 +170,9 @@ public class Mode2Activity extends AppCompatActivity {
                 break;
             case "÷":
                 ResultNumber = ResultNumber / InputNumber;
+                break;
+            case "%":
+                ResultNumber = ResultNumber % InputNumber;
                 break;
             /* 이 부분은 디버깅할 때 어디서 오류났는지 확인하기 위함. 만약 디버깅 때 로그가 찍힌다면 ArithmeticOperation에서 사용된 무언가에 문제가 있는 것
             default:

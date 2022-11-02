@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import java.lang.Math;
 
 import com.example.engineeringcalculator.databinding.ActivityMainBinding;
 
@@ -144,6 +145,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case "÷":
                 ResultNumber = ResultNumber / InputNumber;
+                break;
+            case "%":
+                ResultNumber = ResultNumber % InputNumber;
                 break;
             /* 이 부분은 디버깅할 때 어디서 오류났는지 확인하기 위함. 만약 디버깅 때 로그가 찍힌다면 ArithmeticOperation에서 사용된 무언가에 문제가 있는 것
             default:

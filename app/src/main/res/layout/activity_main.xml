@@ -82,13 +82,15 @@
         app:layout_constraintTop_toBottomOf="@+id/ResultTextView" />
 
     <Button
-        android:id="@+id/PercentButton"
+        android:id="@+id/ReminderButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#00000000"
+        android:onClick="OperatorClick"
+        android:tag="%"
         android:text="%"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -118,7 +120,7 @@
         app:layout_constraintBottom_toTopOf="@+id/Num2Button"
         app:layout_constraintEnd_toStartOf="@+id/ClearButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/PercentButton"
+        app:layout_constraintStart_toEndOf="@+id/ReminderButton"
         app:layout_constraintTop_toBottomOf="@+id/view2"
         app:strokeColor="#000000"
         app:strokeWidth="3dp" />
@@ -182,7 +184,7 @@
         app:layout_constraintEnd_toStartOf="@+id/DivideButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PercentButton"
+        app:layout_constraintTop_toBottomOf="@+id/ReminderButton"
         app:strokeColor="#000000"
         app:strokeWidth="3dp" />
 
@@ -202,7 +204,7 @@
         app:layout_constraintBottom_toTopOf="@+id/Num5Button"
         app:layout_constraintEnd_toStartOf="@+id/ClearButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/PercentButton"
+        app:layout_constraintStart_toEndOf="@+id/ReminderButton"
         app:layout_constraintTop_toBottomOf="@+id/DivideButton"
         app:strokeColor="#000000"
         app:strokeWidth="3dp" />
@@ -288,7 +290,7 @@
         app:layout_constraintBottom_toTopOf="@+id/Num8Button"
         app:layout_constraintEnd_toStartOf="@+id/ClearButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/PercentButton"
+        app:layout_constraintStart_toEndOf="@+id/ReminderButton"
         app:layout_constraintTop_toBottomOf="@+id/Num2Button"
         />
 
@@ -371,7 +373,7 @@
         app:layout_constraintBottom_toTopOf="@+id/Num0Button"
         app:layout_constraintEnd_toStartOf="@+id/ClearButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/PercentButton"
+        app:layout_constraintStart_toEndOf="@+id/ReminderButton"
         app:layout_constraintTop_toBottomOf="@+id/Num5Button"
         app:strokeColor="#000000"
         app:strokeWidth="3dp" />
