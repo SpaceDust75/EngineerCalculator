@@ -2,15 +2,15 @@ package com.example.engineeringcalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Path;
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.engineeringcalculator.databinding.ActivityMainBinding;
+
+import androidx.annotation.Nullable;
 
 public class Mode2Activity extends AppCompatActivity {
 
@@ -23,10 +23,20 @@ public class Mode2Activity extends AppCompatActivity {
     ActivityMainBinding activityMainBinding;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activityMainBinding = activityMainBinding.inflate(getLayoutInflater());
-        setContentView(activityMainBinding.getRoot());//activitymainbinding 찾아보기
+        setContentView(activityMainBinding.getRoot());
+        setContentView(R.layout.mode2_activity_main);
+
+        Button ConvertMode1BT = (Button) findViewById(R.id.ConvertMode1BT);
+        ConvertMode1BT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     //모든 버튼에 대하여 입출력을 지정해주면 코드가 매우 길어짐. 따라서 현재 눌린 버튼에 대하여 그 값을 받아오고 출력함

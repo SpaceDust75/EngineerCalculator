@@ -20,12 +20,10 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button22"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button22"
+        android:id="@+id/ConvertMode1BT"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -46,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button22"
+        tools:layout_editor_absoluteY="48dp"
         tools:text="2+3+5" />
 
     <TextView
@@ -419,10 +417,9 @@
     <Button
         android:id="@+id/SCNum0Button"
         android:layout_width="185dp"
-        android:layout_height="77dp"
-        android:layout_marginStart="16dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="26dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginBottom="8dp"
         android:backgroundTint="#00000000"
         android:tag="0"
         android:text="0"
@@ -477,11 +474,10 @@
 
     <Button
         android:id="@+id/SCDecimalsButton"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="89dp"
+        android:layout_height="80dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginBottom="8dp"
         android:backgroundTint="#00000000"
         android:tag="."
         android:text="."
@@ -492,7 +488,6 @@
         app:layout_constraintEnd_toStartOf="@+id/SCEqualButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/SCNum0Button"
-        app:layout_constraintTop_toBottomOf="@+id/SCNum9Button"
         app:strokeWidth="3dp" />
 
     <Button
@@ -517,11 +512,10 @@
 
     <Button
         android:id="@+id/SCEqualButton"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="92dp"
+        android:layout_height="80dp"
         android:layout_marginStart="4dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="24dp"
         android:backgroundTint="#00000000"
         android:onClick="EqualButtonClick"
         android:tag="="
@@ -533,7 +527,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/SCDecimalsButton"
-        app:layout_constraintTop_toBottomOf="@+id/SCPlusButton"
         app:strokeWidth="3dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
