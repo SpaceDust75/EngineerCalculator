@@ -31,16 +31,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         activityMainBinding = activityMainBinding.inflate(getLayoutInflater());
         setContentView(activityMainBinding.getRoot());//activitymainbinding 찾아보기
+        setContentView(R.layout.activity_main);
 
         //Mode변경 버튼 클릭 시 다른 Activity로 이동
-        /*Button ConvertMode2BT = (Button) findViewById(R.id.ConvertMode2BT);
+        Button ConvertMode2BT = (Button) findViewById(R.id.ConvertMode2BT);
         ConvertMode2BT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Mode2Activity.class);
+                Intent intent = new Intent(getApplicationContext(), FreeBuildActivity.class);
                 startActivity(intent);
             }
-        });*/
+        });
     }
 
     // 추가 버튼 함수 부분
