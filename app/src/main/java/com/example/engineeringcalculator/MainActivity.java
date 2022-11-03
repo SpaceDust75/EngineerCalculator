@@ -33,14 +33,44 @@ public class MainActivity extends AppCompatActivity {
         setContentView(activityMainBinding.getRoot());//activitymainbinding 찾아보기
 
         //Mode변경 버튼 클릭 시 다른 Activity로 이동
-        Button ConvertMode2BT = (Button) findViewById(R.id.ConvertMode2BT);
+        /*Button ConvertMode2BT = (Button) findViewById(R.id.ConvertMode2BT);
         ConvertMode2BT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Mode2Activity.class);
                 startActivity(intent);
             }
-        });
+        });*/
+    }
+
+    // 추가 버튼 함수 부분
+    // Log, 루트, x의 y제곱, n! (총 4개)
+    public void LogButtonClick(View view){      // 자연로그 값 출력(상용로그 x, 상용로그 출력하고 싶다면 자연로그 * 0.434294482)
+        InputNumber = Double.parseDouble(activityMainBinding.ResultTextView.getText().toString());
+        activityMainBinding.MathExpressionTextView.setText("Log" + InputNumber);
+        ResultNumber = Math.log(InputNumber);
+        activityMainBinding.ResultTextView.setText(String.valueOf(ResultNumber));
+    }
+
+    // x의 y제곱은 Operator 클릭으로 넘겼음(case에서 분류 후 처리)
+    public void PowButtonClick(View view){
+
+    }
+
+    public void SqrtButtonClick(View view){
+        InputNumber = Double.parseDouble(activityMainBinding.ResultTextView.getText().toString());
+        activityMainBinding.MathExpressionTextView.setText(InputNumber + "의 제곱근");
+        ResultNumber = Math.sqrt(InputNumber);
+        activityMainBinding.ResultTextView.setText(String.valueOf(ResultNumber));
+    }
+
+    public void FactorialButtonClick(View view){
+        ResultNumber = 1.0;
+        InputNumber = Double.parseDouble(activityMainBinding.ResultTextView.getText().toString());
+        for(double i = 1.0; i <= InputNumber; i += 1.0){
+            ResultNumber = ResultNumber * i;      // fac *= i;
+        }
+        activityMainBinding.ResultTextView.setText(String.valueOf(ResultNumber));
     }
 
     //모든 버튼에 대하여 입출력을 지정해주면 코드가 매우 길어짐. 따라서 현재 눌린 버튼에 대하여 그 값을 받아오고 출력함
@@ -161,6 +191,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case "%":
                 ResultNumber = ResultNumber % InputNumber;
+                break;
+            case "^":
+                ResultNumber = Math.pow(ResultNumber, InputNumber);
                 break;
             /* 이 부분은 디버깅할 때 어디서 오류났는지 확인하기 위함. 만약 디버깅 때 로그가 찍힌다면 ArithmeticOperation에서 사용된 무언가에 문제가 있는 것
             default:
