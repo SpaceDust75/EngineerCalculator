@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         activityMainBinding = activityMainBinding.inflate(getLayoutInflater());
         setContentView(activityMainBinding.getRoot());//activitymainbinding 찾아보기
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
 
         //Mode변경 버튼 클릭 시 다른 Activity로 이동
         Button ConvertMode2BT = (Button) findViewById(R.id.ConvertMode2BT);
